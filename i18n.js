@@ -122,7 +122,7 @@ var i18n = {
 				pattern: `(dar) (.+) (?:a) (.+)`,
 			},
 			look: {
-				pattern: `(olhar|examinar)`
+				pattern: `(olhar|examinar|ver)`
 			},
 			useWith: {
 				pattern: `(usar )(.+)(?: co, )(.+)`,
@@ -194,7 +194,7 @@ var i18n = {
 		},
 		verbs: {
 			look: {
-				pattern: `(olhar|observar|examinar)`
+				pattern: `(olhar|observar|examinar|ver)`
 			},
 			drop: {
 				pattern: `(largar|jogar|soltar|deixar)`
