@@ -1951,7 +1951,7 @@ var i18n = {
 			fail: `Não cabe.`
 		}, 
 		portrait: [
-			`Assim que você fixa seus olhos no retrato de Malcolm IV, você se sente inexoravelmente atraído por seu olhar magnético. Não é possível de forma alguma quebrar a linha que une seus olhos aos do retrato, mas apesar disso você se aproxima cada vez mais da tela. Uma mão invisível parece segurar sua garganta como um gancho de aço, enquanto um sorriso zombeteiro é esboçado no rosto do rei, representado em suntuosos trajes de desfile.`,
+			`Assim que você fixa seus olhos no retrato de Malcolm IV, você se sente inexoravelmente atraído por seu olhar magnético. Não é possível de forma alguma quebrar a linha que une seus olhos aos do retrato, mas apesar disso você se aproxima cada vez mais da tela. Uma mão invisível parece segurar sua garganta como um gancho de aço, enquanto um sorriso zombeteiro se esboça no rosto do Rei, representado em suntuosos trajes de desfile.`,
 			`Quando você sente que está no seu limite, a mão das profundezas do tempo de repente relaxa o seu aperto mortal.`,
 			`Você cai no chão e perde a consciência enquanto tudo gira ao seu redor. Você não pode ver, mas uma expressão de satisfação aparece no rosto de Malcolm IV.`
 		],
