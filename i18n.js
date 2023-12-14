@@ -410,7 +410,7 @@ var i18n = {
 			},
 			youAreWelcome: {
 				pattern: `de nada`,
-				answer: `Não há de que.`
+				answer: `O prazer é todo meu.`
 			},
 			openSesame: {
 				pattern: `abre-te sesamo`,
