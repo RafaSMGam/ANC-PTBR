@@ -172,7 +172,7 @@ var i18n = {
 			wall: `(muro|muros|parede|paredes)( de pedra)?`
 		},
 		defaultMessages: {
-			beSerious: `Seja sério!`,
+			beSerious: `Fala sério!`,
 			notUseful: `Sem utilidade.`,
 			alreadyHaveIt: `Você já tem isso.`,
 			inYourHand: `Está nas suas mãos.`,
