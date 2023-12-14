@@ -809,7 +809,7 @@ var i18n = {
 				},
 				pass: {
 					pattern: `passagem( secreta)?`,
-					onLookFor: `Na chaminé não há nenhum vestígio de passagens secretas. Você lê muitos livros de aventura.`
+					onLookFor: `Não há vestígio algum de uma passagem secreta na lareira. Você anda lendo muitos livros de aventura.`
 				}
 			},
 		},
