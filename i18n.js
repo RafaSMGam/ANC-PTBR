@@ -1431,7 +1431,7 @@ var i18n = {
 				portrait: {
 					label: `o retrato`,
 					pattern: `(retrat(?:o|os)|pintur(?:a|as)|malcolm|tel(?:a|as))`,
-					onLookQuestion: `O pintor quase conseguiu dar vida própria às faces das pessoas, especialmente no caso de Malcolm IV. Tem alguma coisa estranha nesse retrato. Preciso observar mais de perto `
+					onLookQuestion: `O pintor quase conseguiu dar vida própria às faces das pessoas, especialmente no caso de Malcolm IV. Tem alguma coisa estranha nesse retrato. Devo observar mais de perto`
 				}
 			}
 		},
