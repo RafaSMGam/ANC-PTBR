@@ -1,11 +1,5 @@
-LocJAM note:
-
-For tips and guidance, visit the official forum of the event at: https://itch.io/board/3103307/community-help
-
-Have fun! 
-
 #######################################
-Original readme:
+Readme original:
 
 
 
@@ -23,37 +17,37 @@ Original readme:
    AVVENTURA NEL CASTELLO JS    
 ===============================
 
-Adattamento Javascript di
+Adaptação em Javascript de
 "AVVENTURA NEL CASTELLO" v4.1 per MS-DOS
-Di Enrico Colombini e Chiara Tovena
+De Enrico Colombini e Chiara Tovena
 (C) Dinosoft 1982,1984,1987,1996
 
-Versione Javascript a cura di Volpini Federico
+Versão Javascript por Volpini Federico
 (volpini.federico79@gmail.com)
-Riprodotta col consenso degli autori
+Reproduzida com o consenso dos autores
 
-Licenza di distribuzione: CC BY-NC-ND 4.0
+Licença de distribuição: CC BY-NC-ND 4.0
 (Attribution-NonCommercial-NoDerivatives 4.0 International)
 
-Libreria usata per il sonoro: Tone.js
+Biblioteca usado para o áudio: Tone.js
 (https://tonejs.github.io/)
 
 
-PREMESSA
+PREMISSA
 --------
 
-Il gioco è scritto in Javascript (con specifiche EcmaScript 6). Per giocarci basta un browser compatibile con tali specifiche.
+O jogo foi escrito em Javascript (com a especificação EcmaScript 6). Tudo o que você precisa para jogá-lo é de um navegador compatível com essa especificação.
 
-Il salvataggio è possibile grazie al Window.localStorage. A tal proposito è bene ricordare che:
+O salvamento é possível graças ao Window.localStorage. Com relação a isso, vale lembrar que:
 
-- Se è disabilitato non sarà possibile effettuare salvataggi.
-- Se per impostazione del browser, il localstorage viene cancellato ad ogni chiusura del browser stesso, i salvataggi andranno persi.
+- Se estiver desativado, não será possível salvar o jogo.
+- Se, por configuração do navegador, o armazenamento local for excluído toda vez que o navegador for fechado, os jogos salvo serão perdidos.
 
 
-NOTE DELL'AUTORE
+NOTA DO AUTOR
 ----------------
-Il porting è una riproduzione fedele al 99% del gioco originale. 
-Sono state rispettate tutte le dinamiche principali del gioco. 
-Le piccole variazioni sono trascurabili e concordate con gli autori del gioco originale.
+O port é uma reprodução 99% fiel do jogo original.
+Todas as principais dinâmicas do jogo foram respeitadas.
+Pequenas variações são insignificantes e foram feitas com o consentimento dos autores do jogo original.
 
-Buon divertimento.
+Divirtam-se.
