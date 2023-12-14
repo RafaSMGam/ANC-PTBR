@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'LanaPixel';
+    src: url('LanaPixel.eot');
+    src: url('LanaPixel.eot?#iefix') format('embedded-opentype'),
+        url('LanaPixel.woff2') format('woff2'),
+        url('LanaPixel.woff') format('woff'),
+        url('LanaPixel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
