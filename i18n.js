@@ -824,7 +824,7 @@ var i18n = {
 					pattern: `lanc(?:a|as)`,
 					description: `Longa e munida de uma afiada ponta de ferro, ela parece uma arma mortal. Como será que ela foi usada?`,
 					onTake: {
-						question: `Você pega a lança e a puxa em sua direção, mas a armadura parece não querer soltá-la. Tenho que insistir`,
+						question: `Você pega a lança e a puxa em sua direção, mas a armadura parece não querer soltá-la. Devo insistir`,
 						answer: [
 							`Com um puxão firme, você finalmente consegue se apossar da lança.`,
 							`A armadura, desequilibrada, balança um pouco...`,
