@@ -862,7 +862,7 @@ var i18n = {
 					label: `a janela`,
 					pattern: `((da)?(a)? )?janela`,
 					description: `A janela oferece uma vista magnífica das águas turvas do fosso, povoadas por monstros escamosos e de dentes afiados.`,
-					onJump: `Eu não sou bobo`
+					onJump: `Eu não sou besta!`
 				}
 			}
 		},
