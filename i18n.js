@@ -998,8 +998,8 @@ var i18n = {
 			shortDescription: `Você está na câmara do tesouro.`,
 			interactors: {
 				coffer: {
-					label: `um pesado cofre`,
-					pattern: `(?:pesado )?cofre`,
+					label: `um pesado baú`,
+					pattern: `(?:pesado )?bau`,
 					states: [
 						``,
 						`aberto`
