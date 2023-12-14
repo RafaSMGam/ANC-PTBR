@@ -482,7 +482,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 				aiuto: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.help.pattern,
-					callback: "Arrangiati!"
+					callback: "Se vira!"
 				},
 
 				chiama: {
@@ -795,7 +795,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 		else { 
 			if(wtf.indexOf(" ") >=0)
 				wtf = wtf.substring(0,wtf.indexOf(" "));
-			await this.CRT.printTyping("   "+wtf.toUpperCase()+" ???");
+			await this.CRT.printTyping("   "+wtf.toUpperCase()+"???");
 		}
 		return;
 	}
