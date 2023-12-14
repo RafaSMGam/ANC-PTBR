@@ -239,10 +239,10 @@ var i18n = {
 				pattern: `ler`
 			},
 			insert: {
-				pattern: `(enfiar|inserir)`
+				pattern: `(enfiar|inserir|colocar|por|botar|meter)`
 			},
 			insertInto: {
-				pattern: `(enfiar|inserir|por|colocar|enfiuar) (.+)(?: (?:em|no|na|dentro|nos|nass) | nell' ?)(.+)`
+				pattern: `(enfiar|inserir|por|colocar) (.+)(?: (?:em|no|na|dentro|nos|nass) | nell' ?)(.+)`
 			},
 			pray: {
 				pattern: `rezar`,
