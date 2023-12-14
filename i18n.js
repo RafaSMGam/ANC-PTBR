@@ -853,7 +853,7 @@ var i18n = {
 			},
 			interactors: {
 				table: { 
-					description: `É sólida e bem construída: foi usada para Banquetes Reais.`
+					description: `É sólida e bem construída: era usada para Banquetes Reais.`
 				},
 				chairs: { 
 					description: `Ao ver as cadeiras ao redor da mesa, você imagina o Rei e a Rainha graciosamente sentados em cada extremidade, com os convidados dispostos de acordo com seu grau de nobreza, seguindo o rigoroso protocolo imposto pelo cerimonial da corte.`
