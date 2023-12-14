@@ -117,7 +117,7 @@ class IFEngine{
 				},
 
 				// Istruzioni 
-				istruzioni: {
+				instrucoes: {
 					callback: async () => {
 						await this.istruzioni();
 						return true;
@@ -133,7 +133,7 @@ class IFEngine{
 				},
 
 				// Esci
-				basta: {
+				parar: {
 					callback: async () => {
 						let answer = await this.yesNoQuestion(i18n.IFEngine.questions.stopQuestion);
 						if(answer){
