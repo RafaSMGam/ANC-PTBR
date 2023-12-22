@@ -13,7 +13,7 @@ class CRT{
 		this.spad 				= 16;
 		//this.currentCol 		= 1;
 		this.capsLock 			= false;
-		this.notAcceptedKeyCodes= [9,16,17,27,18,33,34,35,36,37,38,39,40,46,112,113,114,115,116,117,118,119,120,121,122,123,225,230];
+		this.notAcceptedKeyCodes= [0,9,16,17,18,20,27,28,29,33,34,35,36,37,38,39,40,46,60,112,113,114,115,116,117,118,119,120,121,122,123,225,230,235,242,255];
 		this.waitText 			= i18n.CRT.waitText;
 		
 		this.printOptions		= {
@@ -225,26 +225,31 @@ class CRT{
 		
 		window.scrollTo(0,document.body.scrollHeight);
 
-
-
 		let inputTxt = "";
 		let lastKeyEvent = null;
 		let keyCode = null;
+		
 		do{
 			lastKeyEvent = await this.keyPressed();
+
+			if(noInput)
+				break;
+
+			if(lastKeyEvent.metaKey)
+				continue;
+
 			keyCode = lastKeyEvent.which || lastKeyEvent.keyCode;
+			
+			console.log(keyCode);	
+			if(keyCode == 0)
+				continue			
 			
 			if(keyCode >= 112 && keyCode <= 115){
 				this.specialKey(keyCode);
 				continue;
 			}
-
-			if(noInput)
-				break;
-
+			
 			inputTxt = this.txt.innerHTML;
-
-			//console.log(keyCode);	
 			
 			if(this.acceptedKeys(keyCode) || keyCode == 13 || keyCode == 229){
 				switch(keyCode){
@@ -255,7 +260,6 @@ class CRT{
 						}
 						if(inputTxt.trim().length > 0){
 							inputTxt = inputTxt.toLowerCase();
-
 						}
 						break;
 					case 8:
@@ -273,7 +277,7 @@ class CRT{
 					
 					default:
 					
-					if(lastKeyEvent.key){
+					if(lastKeyEvent.key/* && lastKeyEvent.key.toLowerCase() != 'undefined'*/){
 						inputTxt += lastKeyEvent.key;
 						//this.currentCol++;
 						this.txt.innerHTML += this.capsLock ? lastKeyEvent.key.toUpperCase() : lastKeyEvent.key;
@@ -366,7 +370,7 @@ class CRT{
 	}
 
 	_isMobile() {
-	  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 	}
 
 }

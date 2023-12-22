@@ -1,0 +1,106 @@
+
+In the AvventuraNelCastelloJSEngine section of the i18n.js file,
+a new key has been introduced: prepareInputSteps.
+
+This special key is used to set a series of replacement performed 
+*sequentially* on the input string typed by the user, in order 
+to simplify it and allow an easier definition of the actions and 
+the objects "Regular Expression Patterns".
+
+In technical terms, the key is an array [...] of "objects" {...}.
+
+Each object has two keys:
+- pattern: the Regular Expression Pattern (Regexp) that sould be replaced
+- replaceWith: the replacement
+
+Let's dive into the english one:
+
+prepareInputSteps: [
+
+	first, all the punctuation plus other characters
+	such as !,$, &, + ecc... are removed (``)
+	{
+		pattern: `[\\.,:;!"£\\$%&\\/\\(\\)=°\\+\\*]*`,
+		replaceWith: ``
+	},
+
+	then the articles the, a, and an are replaced with 
+	a single witespace (` `)
+	{
+		pattern: ` (the|a|an) `,
+		replaceWith: ` `
+	},
+
+	then two or more spaces (` +`) are replaced 
+	with a single space (` `)
+	{
+		pattern: ` +`,
+		replaceWith: ` `
+	},
+
+	then the words "inside" and "into" are replaced with the word "in"
+	(N.b. the spaces before and after both in the pattern and 
+	in the replacementWith are very important!!)
+	{
+		pattern: ` (inside|into) `,
+		replaceWith: ` in `
+	},
+
+	then the words above and over are replaced with the word "on"
+	(N.b. the spaces before and after both in the pattern and 
+	in the replacementWith are very important!!)
+	{
+		pattern: ` (above|over) `,
+		replaceWith: ` on `
+	},
+
+	then the words among is replaced with the word "between"
+	(N.b. the spaces before and after both in the pattern and 
+	in the replacementWith are very important!!)
+	{
+		pattern: ` among `,
+		replaceWith: ` between `
+	},
+]
+
+In this way:
+- the input "take the sword!" become "take sword"
+- input like "stick the bone into the hole" 
+  is transformed in "stick bone in hole"
+
+At this point, the definition of the InsertInto pattern is easier:
+
+insertInto: {
+	pattern: `(put|insert|stick) (.+) (?:in) (.+)`
+}
+
+rather than:
+
+insertInto: {
+	pattern: `(put|insert|stick) (.+) (?:in|inside|into) (.+)`
+}
+
+Each language has it's own rules, so for example in italian, 
+to replace the same (inside|into):
+
+	...
+	{
+		pattern: ` (nel|nell|nello|negli|nella|nelle|dentro) `,
+		replaceWith: ` in `
+	},
+
+so the insertInto pattern is:
+
+insertInto: {
+	pattern: `(infila|inserisci) (.+) (?:in) (.+)`
+},
+
+rather than:
+
+insertInto: {
+	pattern: `(infila|inserisci) (.+) (?:nel|nell|nello|negli|nella|nelle|dentro) (.+)`
+},
+
+For tips and guidance, visit the official forum of the event at: https://itch.io/board/3103307/community-help
+
+Have fun! 

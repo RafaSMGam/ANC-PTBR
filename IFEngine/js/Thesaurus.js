@@ -97,6 +97,10 @@ class Thesaurus{
 				complex: true,
 				defaultMessage: this.defaultMessages.PREFERISCO_DI_NO
 			},
+			cerca:{
+				pattern: i18n.Thesaurus.verbs.lookFor.pattern,
+				defaultMessage: this.defaultMessages.NON_TROVATO
+			},
 			guarda: {
 				pattern: i18n.Thesaurus.verbs.look.pattern,
 				defaultMessage: this.defaultMessages.NULLA_DI_PARTICOLARE
@@ -109,10 +113,6 @@ class Thesaurus{
 			usa:{
 				pattern: i18n.Thesaurus.verbs.use.pattern,
 				defaultMessage: this.defaultMessages.SII_PIU_SPECIFICO
-			},
-			cerca:{
-				pattern: i18n.Thesaurus.verbs.lookFor.pattern,
-				defaultMessage: this.defaultMessages.NON_TROVATO
 			},
 			sali: {
 				pattern: i18n.Thesaurus.verbs.goUp.pattern,

@@ -1,0 +1,64 @@
+2023-12-20 Federico Volpini <volpini.federico79@gmail.com> 
+
+	* i18n.js: 
+		- added "title" key in root
+		- renamed all key name "answer" to "defaultMesssage" in AvventuraNelCastelloJS->verbs and AvventuraNelCastelloJS->commands section
+		- updated "YesNo" key in IFEngine section
+		- removed "verbs" key in IFEngine section
+		- added "questionMark" key in IFEngine section
+		- updated "up" pattern in Thesaurus->commands section
+		- updated "down" pattern in Thesaurus->commands section
+		- updated "useWith" pattern in Thesaurus->verbs section
+		- updated "say" key in AvventuraNelCastelloJSEngine->commonPatterns section
+		- updated "wall" key in AvventuraNelCastelloJSEngine->commonPatterns section
+		- updated "insertInto" pattern in AvventuraNelCastelloJSEngine->verbs section
+		- updated "sitDown" pattern in AvventuraNelCastelloJSEngine->verbs section
+		- updated "talk" pattern in AvventuraNelCastelloJSEngine->verbs section
+		- updated "ask" pattern in AvventuraNelCastelloJSEngine->verbs section
+		- updated "askTo" pattern in AvventuraNelCastelloJSEngine->verbs section
+		- added "instructions" key in AvventuraNelCastelloJSEngine->commands section
+		- added "instructions" key in AvventuraNelCastelloJSEngine->commands section
+		- added "defaultMessage" key in AvventuraNelCastelloJSEngine->commands->help section
+		- updated "getOut" pattern in AvventuraNelCastelloJSEngine->commands section
+		- updated "sleep" pattern in AvventuraNelCastelloJSEngine->commands section
+		- updated "senno" pattern in AvventuraNelCastelloJSEngine->commands section
+		- updated "saySpell" pattern in AvventuraNelCastelloJSEngine->commands section
+		- updated "bigmeow" pattern in AvventuraNelCastelloJSEngine->commands section
+		- updated "iotid" pattern in AvventuraNelCastelloJSEngine->commands section
+		- replaced "stripPattern" key with "prepareInputSteps" key in AvventuraNelCastelloJSEngine section
+		- updated "stairs" description in AvventuraNelCastelloJS->commonInteractors section
+		- updated "walls" description in AvventuraNelCastelloJS->commonInteractors section
+		- updated "labyrinth" pattern in AvventuraNelCastelloJS->commonInteractors section
+		- updated "ramparts" pattern in AvventuraNelCastelloJS->commonInteractors section
+		- updated "pass" pattern in AvventuraNelCastelloJS->commonInteractors section
+		- removed *all* the state keys in room's interactors and objects and added the interactor/object state directly into the label (two states are now two different labels)
+		- updated "light" pattern in AvventuraNelCastelloJS->rooms->lounge->interactors section
+		- updated "pass" pattern in AvventuraNelCastelloJS->rooms->lounge->interactors section
+		- updated "window" pattern in AvventuraNelCastelloJS->rooms->diningRoom->interactors section
+		- updated "moulds" pattern in AvventuraNelCastelloJS->rooms->narrowTunnel->interactors section
+		- updated "mushrooms" pattern in AvventuraNelCastelloJS->rooms->narrowTunnel->interactors section
+		- updated "stains" pattern in AvventuraNelCastelloJS->rooms->vegetablePantry->interactors section
+		- updated "crusts" pattern in AvventuraNelCastelloJS->rooms->cheesePantry->interactors section
+		- updated "deer" pattern in AvventuraNelCastelloJS->rooms->gamePantry->interactors section
+		- updated "keg" pattern in AvventuraNelCastelloJS->rooms->whiskeyPantry->interactors section
+		- updated "benches" pattern in AvventuraNelCastelloJS->rooms->guardRoom->interactors section
+		- updated "balls" pattern in AvventuraNelCastelloJS->rooms->catapultRoom->interactors section
+		- updated "pieces" pattern in AvventuraNelCastelloJS->rooms->catapultRoom->interactors section
+		- updated "column" pattern in AvventuraNelCastelloJS->rooms->columnsHall->interactors section
+		- renamed key name "bat" to "bludgeon" in AvventuraNelCastelloJS->objects section
+		- updated "bludgeon" pattern in AvventuraNelCastelloJS->objects section
+		- updated "cat" pattern in AvventuraNelCastelloJS->objects section
+		- renamed key name "towho" to "toWho" in AvventuraNelCastelloJS->objects->milkAndHoney->onOffer section
+		- renamed key name "pillow" to "cushion" in AvventuraNelCastelloJS->objects section
+		- renamed key name "parchment" key name to "scroll" in AvventuraNelCastelloJS->objects section
+		- updated "ogre" pattern in AvventuraNelCastelloJS->objects section
+		- updated "dwarf" pattern in AvventuraNelCastelloJS->objects section
+		- renamed "torre" to "scoglio" in third element (Velocemente giunge alla torre:...) of AvventuraNelCastelloJS->sequences->final section
+		- renamed key name "wiskey" to "whiskey" in AvventuraNelCastelloJS->timedEvents section
+		
+
+	* Updated IFEngine modules to fix issues and implement the i18n.js file update.
+	* Updated AvventuraNelCastelloJSEngine.js and AvventuraNelCastelloJS.js to fix issues and implement the i18n.js file update.
+		
+
+

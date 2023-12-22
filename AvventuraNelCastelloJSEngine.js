@@ -323,7 +323,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 					pattern: i18n.AvventuraNelCastelloJSEngine.verbs.wait.pattern,
 					defaultMessage: this.Thesaurus.defaultMessages.SII_SERIO,
 					callback: async () => {
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.verbs.wait.answer, {cr: false});
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.verbs.wait.defaultMessage, {cr: false});
 						await this.CRT.printTyping(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", {printDelay: 180});
 					}
 				},
@@ -429,12 +429,21 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 						return true;
 					}
 				},
-
+				
+				istruzioni: {
+					pattern: i18n.AvventuraNelCastelloJSEngine.commands.instructions.pattern,
+					callback: async () => {
+						await this.istruzioni();
+						return true;
+					},
+				},
+				
 				basta: {
+					pattern: i18n.AvventuraNelCastelloJSEngine.commands.stop.pattern,
 					callback: async () => {
 						let answer = await this.yesNoQuestion(i18n.IFEngine.questions.stopQuestion);
 						if(answer){
-							await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.stop.answer,{nlAfter:1, nlBefore:1});
+							await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.stop.defaultMessage,{nlAfter:1, nlBefore:1});
 							await this._punti();
 							await this.CRT.print("\n\n");
 							this.displayMenu(this.menu.contestuale);
@@ -482,14 +491,14 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 				aiuto: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.help.pattern,
-					callback: "Se vira!"
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.help.defaultMessage
 				},
 
 				chiama: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.call.pattern,
 					
 					callback: async (t) => {
-						let msg = i18n.AvventuraNelCastelloJSEngine.commands.call.answer;
+						let msg = i18n.AvventuraNelCastelloJSEngine.commands.call.defaultMessage;
 						if(t.indexOf(" ") >= 0){
 							let altro = t.substring(t.indexOf(" ")+1, t.length);
 							if(altro.match(new RegExp(this.Thesaurus.commands.aiuto.pattern)) != null){
@@ -510,30 +519,30 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 				piangi:{
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.cry.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.cry.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.cry.defaultMessage
 				},
 
 				turni:{
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.moves.pattern,
 					callback: async () => {
-						return i18n.AvventuraNelCastelloJSEngine.commands.moves.answer(this.altriDati.mosse)
+						return i18n.AvventuraNelCastelloJSEngine.commands.moves.defaultMessage(this.altriDati.mosse)
 					}
 				},
 
 				idiota: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.idiot.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.idiot.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.idiot.defaultMessage
 				},
 
 				abracadabra: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.abracadabra.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.abracadabra.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.abracadabra.defaultMessage
 				},
 
 				muori: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.die.pattern,
 					callback: async () => {
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.die.answer);
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.die.defaultMessage);
 						this.die();
 						return false;
 					}
@@ -541,18 +550,18 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 				pensa: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.think.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.think.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.think.defaultMessage
 				},
 
 				esci: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.getOut.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.getOut.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.getOut.defaultMessage
 				},
 
 				dormi: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.sleep.pattern,
 					callback: async () => {
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.sleep.answer, {printDelay: 180});
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.sleep.defaultMessage, {printDelay: 180});
 						return true;
 					}
 				},
@@ -560,27 +569,27 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 				// Non dir boh!
 				boh: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.maybe.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.maybe.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.maybe.defaultMessage
 				},
 
 				bravo: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.good.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.good.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.good.defaultMessage
 				},
 
 				prego: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.youAreWelcome.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.youAreWelcome.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.youAreWelcome.defaultMessage
 				},
 				
 				apritiSesamo:{
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.openSesame.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.openSesame.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.openSesame.defaultMessage
 				},
 
 				aspettaMezzanotte:{
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.waitForMidnight.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.waitForMidnight.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.waitForMidnight.defaultMessage
 				},
 
 				saluta: {
@@ -590,27 +599,27 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 				buongiorno: {
 					pattern: this.Thesaurus.verbs.buongiorno.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.greeting.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.greeting.defaultMessage
 				},
 
 				ciao: {
 					pattern: this.Thesaurus.verbs.ciao.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.hello.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.hello.defaultMessage
 				},
 
 				senno: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.senno.pattern(this.commonPatterns.pronuncia),
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.senno.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.senno.defaultMessage
 				},
 
 				usaSenno: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.useSenno.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.useSenno.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.useSenno.defaultMessage
 				},
 
 				cercaDizionario: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.lookForDictionary.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.lookForDictionary.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.lookForDictionary.defaultMessage
 				},
 				/*
 				rompiMuro: {
@@ -645,18 +654,18 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 				presentati: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.introduceYourself.pattern,
 					callback: async () => {
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.lookForDictionary.answer, {printDelay: 75});
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.introduceYourself.defaultMessage, {printDelay: 75});
 					}
 				},
 
 				si: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.yes.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.yes.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.yes.defaultMessage
 				},
 
 				no: {
 					pattern: i18n.AvventuraNelCastelloJSEngine.commands.no.pattern,
-					callback: i18n.AvventuraNelCastelloJSEngine.commands.no.answer
+					callback: i18n.AvventuraNelCastelloJSEngine.commands.no.defaultMessage
 				},
 
 
@@ -670,12 +679,12 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 						if(this.inventario.gatto === undefined && this.stanzaCorrente.objects.gatto === undefined)
 							return this.Thesaurus.defaultMessages.NON_SUCCEDE_NIENTE;
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.answer.prelude[0], {printDelay:150});
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.answer.prelude[1], {printDelay: 150});
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.defaultMessage.prelude[0], {printDelay:150});
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.defaultMessage.prelude[1], {printDelay: 150});
 						await this.CRT.sleep(1500);
 						if(this.stanzaCorrente.objects.orco){
-							await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.answer.success[0], {printDelay:150});
-							await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.answer.success[1]);
+							await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.defaultMessage.success[0], {printDelay:150});
+							await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.defaultMessage.success[1]);
 							delete this.inventario.gatto;
 							this.datiAvventura.objects.gatto.posizione = null;
 							this.datiAvventura.objects.orco.posizione = null;
@@ -683,7 +692,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 							this.refreshOggettiInStanza();
 							return true;
 						} 
-						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.answer.fail);
+						await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.commands.bigmeow.defaultMessage.fail);
 						this.die();
 						return false;
 					}	
@@ -744,7 +753,9 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 		if( Object.keys(lista).length > 0){
 			for(let i in lista){
 				if(lista[i].visibile){
-					let cosaVedo = lista[i].label+ (lista[i].states ? " "+lista[i].states[lista[i].status] : "");
+					let cosaVedo = Array.isArray(lista[i].label) ? 
+						lista[i].label[lista[i].status] : 
+						lista[i].label;
 					await this.CRT.printTyping(i18n.AvventuraNelCastelloJSEngine.prefixLabels.ISee+" "+cosaVedo.trim()+".");
 				}
 			}
@@ -782,12 +793,12 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 		let s = interattore ? interattore : ( oggetto ? oggetto : false);
 
 		if(s) {
-			let msg = APO.verb == i18n.IFEngine.verbs.lookFor ?
+			let msg = APO.verb == "cerca" ?
 				this.Thesaurus.verbs.cerca.defaultMessage : 
 				(	
 					APO.actionObject.inventario === undefined ?
-					(s == interattore && s.peso === undefined) || s.label === undefined ? this.Thesaurus.defaultMessages.QUI_NON_NE_VEDO : i18n.AvventuraNelCastelloJSEngine.prefixLabels.cantSeeHere+" "+s.label+"." :
-					(s == interattore && s.peso === undefined) || s.label === undefined ? this.Thesaurus.defaultMessages.NON_NE_POSSIEDI : i18n.AvventuraNelCastelloJSEngine.prefixLabels.youDontOwn+" "+s.label+"."
+					(s == interattore && s.peso === undefined) || s.label === undefined ? this.Thesaurus.defaultMessages.QUI_NON_NE_VEDO : i18n.AvventuraNelCastelloJSEngine.prefixLabels.cantSeeHere+" "+(Array.isArray(s.label) ? s.label[0] : s.label)+"." :
+					(s == interattore && s.peso === undefined) || s.label === undefined ? this.Thesaurus.defaultMessages.NON_NE_POSSIEDI : i18n.AvventuraNelCastelloJSEngine.prefixLabels.youDontOwn+" "+(Array.isArray(s.label) ? s.label[0] : s.label)+"."
 				);
 
 			await this.CRT.printTyping(msg);
@@ -795,7 +806,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 		else { 
 			if(wtf.indexOf(" ") >=0)
 				wtf = wtf.substring(0,wtf.indexOf(" "));
-			await this.CRT.printTyping("   "+wtf.toUpperCase()+"???");
+			await this.CRT.printTyping("   "+wtf.toUpperCase()+" "+i18n.IFEngine.questionMark+i18n.IFEngine.questionMark+i18n.IFEngine.questionMark);
 		}
 		return;
 	}
@@ -807,7 +818,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 				if(s[i].overrideAzioneInventario !== undefined && s[i].overrideAzioneInventario)
 					continue;
 				if(inventarioKey[i] && this.inventario[s[i].key] === undefined){
-					await this.CRT.println(s[i].label === undefined ? this.Thesaurus.defaultMessages.NON_NE_POSSIEDI : i18n.AvventuraNelCastelloJSEngine.prefixLabels.youDontOwn+" "+s[i].label+".");
+					await this.CRT.println(s[i].label === undefined ? this.Thesaurus.defaultMessages.NON_NE_POSSIEDI : i18n.AvventuraNelCastelloJSEngine.prefixLabels.youDontOwn+" "+(Array.isArray(s[i].label) ? s[i].label[0] : s[i].label)+".");
 					return true;
 				}
 			}
@@ -836,14 +847,14 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 			this.input();
 			return;
 		}
-
+		/*
 		let leiInput = input.indexOf(" ") == -1 ? input : input.substring(0,input.indexOf(" "));
 		if(leiInput.substring(leiInput.length-2) == "re"){
 			await this.CRT.printTyping("- "+i18n.AvventuraNelCastelloJSEngine.messages.dontBeFormal);
 			this.input();
 			return;	
 		}
-
+		*/
 		if(mossa)
 			this.altriDati.mosse++;
 
@@ -858,13 +869,21 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 
 	// @Override _prepare
 	_prepare(input){
-		input = super._prepare(input);
-		let pattern = RegExp('\\s+'+i18n.AvventuraNelCastelloJSEngine.stripPattern+'[\\s\']+');
-		input = input.replace(/l'/," ");
-		input = input.replace(pattern," ");
-		input = input.replace(/\s+/g," ");
+		input = input.trim().toLowerCase()
+		// tolgo gli accenti alle parole
+		input = input.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+		
+		for (let step of i18n.AvventuraNelCastelloJSEngine.prepareInputSteps){
+			let pattern = RegExp(step.pattern,"g");
+			input = input.replace(pattern,step.replaceWith);
+		}
+		
+		console.log(input)
+		return input;
+		/*
 		input = input.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 		return input;
+		*/
 	}
 
 	_getInterattore(key){
@@ -1092,7 +1111,7 @@ class AvventuraNelCastelloJSEngine extends IFEngine{
 	}
 
 	async _notSeen(s){
-		await this.CRT.printTyping(s.label === undefined ? this.Thesaurus.defaultMessages.QUI_NON_NE_VEDO : i18n.AvventuraNelCastelloJSEngine.prefixLabels.cantSeeHere+" "+s.label+".");
+		await this.CRT.printTyping(s.label === undefined ? this.Thesaurus.defaultMessages.QUI_NON_NE_VEDO : i18n.AvventuraNelCastelloJSEngine.prefixLabels.cantSeeHere+" "+(Array.isArray(s.label) ? s.label[0] : s.label)+".");
 		return true;
 	}
 }

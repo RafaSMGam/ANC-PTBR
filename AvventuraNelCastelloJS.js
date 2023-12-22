@@ -369,8 +369,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 						ponteLevatoio: {
 							label: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.drawbridge.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.drawbridge.pattern,
-							states: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.drawbridge.states,
-							status: 0,
 							description: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.drawbridge.description,
 							visibile: true,
 							peso: -1,
@@ -387,7 +385,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 							label: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.doorway.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.doorway.pattern,
 							description: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.doorway.description,
-							states: i18n.AvventuraNelCastelloJS.rooms.paradeGround.interactors.doorway.states,
 							status: 0,
 							visibile: true,
 							peso: -1,
@@ -458,8 +455,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 						blasone: {
 							label: i18n.AvventuraNelCastelloJS.rooms.atrium.interactors.blazon.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.atrium.interactors.blazon.pattern,
-							states: i18n.AvventuraNelCastelloJS.rooms.atrium.interactors.blazon.states,
-							status: 0,
 							visibile: true,
 							peso: -1,
 							on: {
@@ -737,7 +732,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 							pattern: i18n.AvventuraNelCastelloJS.rooms.library.interactors.book.pattern,
 							description: i18n.AvventuraNelCastelloJS.rooms.library.interactors.book.description,
 							posizione: "biblioteca",
-							states: i18n.AvventuraNelCastelloJS.rooms.library.interactors.book.states,
 							status:0,
 							visibile: true,
 							peso: -1,
@@ -877,8 +871,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 							label: i18n.AvventuraNelCastelloJS.rooms.castleDungeon.interactors.hole.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.castleDungeon.interactors.hole.pattern,
 							description: i18n.AvventuraNelCastelloJS.rooms.castleDungeon.interactors.hole.description,
-							states: i18n.AvventuraNelCastelloJS.rooms.castleDungeon.interactors.hole.states,
-							status: 0,
 							visibile: true,
 							peso: -1
 						},
@@ -992,8 +984,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 						forziere: {
 							label: i18n.AvventuraNelCastelloJS.rooms.treasureChamber.interactors.coffer.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.treasureChamber.interactors.coffer.pattern,
-							states: i18n.AvventuraNelCastelloJS.rooms.treasureChamber.interactors.coffer.states,
-							status: 0,
+							status: 0, 
 							visibile:true,
 							peso: -1,
 							on: {
@@ -1013,11 +1004,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 									if(this.stanzaCorrente.interactors.fantasma.neutralizzato === false){
 										if(this.stanzaCorrente.interactors.fantasma.visibile === false){
 											this.scopri(this.stanzaCorrente.interactors.fantasma);
-
-											/*DEBUG*/
-											this.stanzaCorrente.interactors.fantasma.neutralizzato = true;
-
-
 											return i18n.AvventuraNelCastelloJS.rooms.treasureChamber.interactors.coffer.onOpen[0]
 										}
 										await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.treasureChamber.interactors.coffer.onOpen[1], {printDelay: 125});
@@ -1081,7 +1067,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					override: {
 						commands: {
 							ciao: {
-								pattern: () => "(?:"+this.commonPatterns.pronuncia+")?"+this.Thesaurus.verbs.ciao.pattern+"(\\s+"+this.stanzaCorrente.objects.nano.pattern+")?",
+								pattern: () => "(?:"+this.commonPatterns.pronuncia+")?"+this.Thesaurus.verbs.ciao.pattern+"( "+this.stanzaCorrente.objects.nano.pattern+")?",
 								callback: async () => {
 									await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.woodshed.override.commands.helloPrefix, {nlAfter:1});
 									await this.CRT.sleep(1500);
@@ -1089,7 +1075,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 								}
 							},
 							buongiorno: {
-								pattern: () => "(?:"+this.commonPatterns.pronuncia+")?"+this.Thesaurus.verbs.buongiorno.pattern+"(\\s+"+this.stanzaCorrente.objects.nano.pattern+")?",
+								pattern: () => "(?:"+this.commonPatterns.pronuncia+")?"+this.Thesaurus.verbs.buongiorno.pattern+"( "+this.stanzaCorrente.objects.nano.pattern+")?",
 								callback: async () => this.stanzaCorrente.objects.nano.on.saluta() 
 							},
 							/*
@@ -1231,7 +1217,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 							label: i18n.AvventuraNelCastelloJS.rooms.secretRoom.interactors.pendulumClock.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.secretRoom.interactors.pendulumClock.pattern,
 							description: i18n.AvventuraNelCastelloJS.rooms.secretRoom.interactors.pendulumClock.description,
-							states: i18n.AvventuraNelCastelloJS.rooms.secretRoom.interactors.pendulumClock.states,
 							status: 0,
 							peso: 99,
 							visibile: true,
@@ -1337,7 +1322,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 									return false;
 								}
 								await this.CRT.clear();
-								await this.CRT.printTyping(i81n.AvventuraNelCastelloJS.rooms.L29.dodgersHatch,{nlAfter:1});
+								await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.L29.dodgersHatch,{nlAfter:1});
 								await this.CRT.sleep(1500);
 								this.entra('atrioCastello');
 							},
@@ -1480,8 +1465,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 							label: i18n.AvventuraNelCastelloJS.rooms.topOfTower.interactors.flag.label,
 							pattern: i18n.AvventuraNelCastelloJS.rooms.topOfTower.interactors.flag.pattern,
 							description: i18n.AvventuraNelCastelloJS.rooms.topOfTower.interactors.flag.description,
-							states: i18n.AvventuraNelCastelloJS.rooms.topOfTower.interactors.flag.states,
-							status: 0,
 							visibile: true,
 							peso: 99,
 							on: {
@@ -1980,8 +1963,8 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 
 				// 52.CUCINA
 				cucina: {
-					description: i18n.AvventuraNelCastelloJS.rooms.vegetablePantry.description,
-					shortDescription: i18n.AvventuraNelCastelloJS.rooms.vegetablePantry.shortDescription,
+					description: i18n.AvventuraNelCastelloJS.rooms.kitchen.description,
+					shortDescription: i18n.AvventuraNelCastelloJS.rooms.kitchen.shortDescription,
 					directions: {
 						s: 'salaTrofei',
 						e: 'salaPranzo',
@@ -2225,9 +2208,9 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 								on: {
 									saluta: async () => {
 										let i=0;
-										await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.interactors.nessie.onGreet[i++], {cr:false});
+										await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.interactors.nessie.onGreet[i++]+" ", {cr:false});
 										await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.interactors.nessie.onGreet[i++], {reversed: true, cr:false});
-										await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.interactors.nessie.onGreet[i++]);
+										await this.CRT.printTyping(" "+i18n.AvventuraNelCastelloJS.rooms.rock.interactors.nessie.onGreet[i++]);
 									},
 									uccidi: i18n.AvventuraNelCastelloJS.rooms.rock.interactors.nessie.onKill
 								}
@@ -2250,9 +2233,9 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 										
 								await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.override.commands.swim[i++]);
 								await this.CRT.sleep(1200);
-								await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.override.commands.swim[i++],{cr:false});
+								await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.override.commands.swim[i++]+" ",{cr:false});
 								await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.override.commands.swim[i++],{reversed: true, cr:false});
-								await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.rooms.rock.override.commands.swim[i++]);
+								await this.CRT.printTyping(" "+i18n.AvventuraNelCastelloJS.rooms.rock.override.commands.swim[i++]);
 								this.die();
 								return false;
 							}
@@ -2294,7 +2277,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					label: i18n.AvventuraNelCastelloJS.objects.bone.label,
 					pattern: i18n.AvventuraNelCastelloJS.objects.bone.pattern,
 					posizione: "segretaCastello",
-					states: i18n.AvventuraNelCastelloJS.objects.bone.states,
 					status:0,
 					on: {
 						guarda: i18n.AvventuraNelCastelloJS.objects.bone.onLook,
@@ -2307,12 +2289,10 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 				},
 
 				mazza: {
-					label: i18n.AvventuraNelCastelloJS.objects.bat.label,
-					pattern: i18n.AvventuraNelCastelloJS.objects.bat.pattern,
-					description: i18n.AvventuraNelCastelloJS.objects.bat.description,
+					label: i18n.AvventuraNelCastelloJS.objects.bludgeon.label,
+					pattern: i18n.AvventuraNelCastelloJS.objects.bludgeon.pattern,
+					description: i18n.AvventuraNelCastelloJS.objects.bludgeon.description,
 					posizione: "depositoAttrezzi",
-					states: i18n.AvventuraNelCastelloJS.objects.bat.states,
-					status: 0,
 					visibile: true
 				},
 
@@ -2321,15 +2301,14 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					pattern: i18n.AvventuraNelCastelloJS.objects.cat.pattern,
 					description: i18n.AvventuraNelCastelloJS.objects.cat.description,
 					posizione: "salone",
-					states: i18n.AvventuraNelCastelloJS.objects.cat.states,
-					status: 1,
+					status: 0,
 					visibile: true,
 					on: {
 						prendi: async () => {
 							if(this.inventario.gatto !== undefined)
 								return i18n.AvventuraNelCastelloJS.objects.cat.onTake.alreadyIn;
 							if(await this.canITakeThat(this.stanzaCorrente.objects.gatto)){
-								this.stanzaCorrente.objects.gatto.status=0;
+								this.stanzaCorrente.objects.gatto.status=1;
 								this._aggiungiInInventario(this.stanzaCorrente.objects.gatto);
 								return i18n.AvventuraNelCastelloJS.objects.cat.onTake.gotIt;
 							}
@@ -2337,8 +2316,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 							return false;
 						},
 						lascia: async () => {
-							if(this.inventario.gatto.status !== undefined)
-								this.datiAvventura.objects.gatto.status=1;
+							this.inventario.gatto.status=0;
 							return null;
 						},
 						accarezza: async () => {
@@ -2379,13 +2357,12 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					pattern: i18n.AvventuraNelCastelloJS.objects.sword.pattern,
 					description: i18n.AvventuraNelCastelloJS.objects.sword.description,
 					posizione: "salaTrofei",
-					states: i18n.AvventuraNelCastelloJS.objects.sword.states,
 					status:0,
 					visibile: false,
 					on: {
 						guarda: () => {
 							if(this.inventario.spada){
-								this.datiAvventura.objects.spada.status = 1;
+								this.inventario.spada.status = 1;
 								this.aggiungiPunti("vistoSortilegio");
 								return i18n.AvventuraNelCastelloJS.objects.sword.onLook
 							}
@@ -2394,12 +2371,16 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					},
 					linkedObjects: ['sortilegio'],
 					sortilegio: async (ask) =>{
-						if(this.datiAvventura.objects.spada.status == 0)
-							return i18n.AvventuraNelCastelloJS.objects.sword.spell.dontKnow
 						if(this.inventario.spada === undefined){
+							if(this.datiAvventura.objects.spada.status == 0)
+								return i18n.AvventuraNelCastelloJS.objects.sword.spell.dontKnow
+						
 							return i18n.AvventuraNelCastelloJS.objects.sword.spell.dontRemember
 						}
 						if(this.inventario.spada){
+							if(this.inventario.spada.status == 0)
+								return i18n.AvventuraNelCastelloJS.objects.sword.spell.dontKnow
+
 							if(ask){
 								let res = await this.yesNoQuestion(i18n.AvventuraNelCastelloJS.objects.sword.spell.question);
 								if(res == false){
@@ -2451,7 +2432,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 						i18n.AvventuraNelCastelloJS.objects.milkAndHoneyCup.description.empty
 					],
 					posizione: "salaPranzo",
-					states: i18n.AvventuraNelCastelloJS.objects.milkAndHoneyCup.states,
 					status:0,
 					visibile: true,
 					linkedObjects: ["latteMiele"],
@@ -2468,7 +2448,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 						bevi: async () => {
 							if(this.inventario.coppaLattemiele){
 								if(this.inventario.coppaLattemiele.status == 0){
-									this.datiAvventura.objects.coppaLattemiele.status = 1;
+									this.inventario.coppaLattemiele.status = 1;
 									this.datiAvventura.objects.latteMiele.bevuto = true;
 									this.altriDati.golaSecca = false;
 									this.startTimedEvent("latteMiele");
@@ -2553,8 +2533,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					pattern: i18n.AvventuraNelCastelloJS.objects.sheet.pattern,
 					description: i18n.AvventuraNelCastelloJS.objects.sheet.description,
 					posizione: "biblioteca",
-					states: i18n.AvventuraNelCastelloJS.objects.sheet.states,
-					status: 0,
 					visibile: false,
 					on: {
 						leggi: async () => {
@@ -2570,15 +2548,15 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 
 				
 				cuscino: {
-					label: i18n.AvventuraNelCastelloJS.objects.pillow.label,
-					pattern: i18n.AvventuraNelCastelloJS.objects.pillow.pattern,
-					description: i18n.AvventuraNelCastelloJS.objects.pillow.description,
+					label: i18n.AvventuraNelCastelloJS.objects.cushion.label,
+					pattern: i18n.AvventuraNelCastelloJS.objects.cushion.pattern,
+					description: i18n.AvventuraNelCastelloJS.objects.cushion.description,
 					posizione: "salaTrono",
 					on: {
 						"alza|spingi": async () => {
 							this.scopri(this.datiAvventura.objects.astuccio);
 							this.aggiungiPunti("trovatoAstuccio");
-							await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.objects.pillow.onLiftUp);
+							await this.CRT.printTyping(i18n.AvventuraNelCastelloJS.objects.cushion.onLiftUp);
 						},
 						prendi: async () => {
 							if(await this.canITakeThat(this.stanzaCorrente.objects.cuscino) == false){
@@ -2615,26 +2593,26 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 				},
 
 				pergamena: {
-					label: i18n.AvventuraNelCastelloJS.objects.parchment.label,
-					pattern: i18n.AvventuraNelCastelloJS.objects.parchment.pattern,
-					description: i18n.AvventuraNelCastelloJS.objects.parchment.description,
+					label: i18n.AvventuraNelCastelloJS.objects.scroll.label,
+					pattern: i18n.AvventuraNelCastelloJS.objects.scroll.pattern,
+					description: i18n.AvventuraNelCastelloJS.objects.scroll.description,
 					posizione: "salaTrono",
 					visibile: false,
 					tradotta: false,
 					on: {
 						leggi: async () => {
 							if(this.inventario.pergamena === undefined){
-								return i18n.AvventuraNelCastelloJS.objects.parchment.onRead.dontHaveIt;
+								return i18n.AvventuraNelCastelloJS.objects.scroll.onRead.dontHaveIt;
 							}
-							return i18n.AvventuraNelCastelloJS.objects.parchment.onRead.fail;
+							return i18n.AvventuraNelCastelloJS.objects.scroll.onRead.fail;
 						},
 						traduci: async () => {
 							if(this.stanzaCorrente.interactors.dizionario && this.stanzaCorrente.interactors.dizionario.visibile === undefined){
 								this.aggiungiPunti("tradottaPergamena");
 								this.datiAvventura.objects.pergamena.tradotta = true;
-								return i18n.AvventuraNelCastelloJS.objects.parchment.onTranslate.success.join("\n");
+								return i18n.AvventuraNelCastelloJS.objects.scroll.onTranslate.success.join("\n");
 							}
-							return i18n.AvventuraNelCastelloJS.objects.parchment.onTranslate.fail;
+							return i18n.AvventuraNelCastelloJS.objects.scroll.onTranslate.fail;
 						}
 					}
 					
@@ -2644,8 +2622,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					label: i18n.AvventuraNelCastelloJS.objects.ogre.label,
 					pattern: i18n.AvventuraNelCastelloJS.objects.ogre.pattern,
 					posizione: "largoCunicolo",
-					states: i18n.AvventuraNelCastelloJS.objects.ogre.states,
-					status: 0,
 					visibile: true,
 					peso: -1,
 					on: {
@@ -2658,7 +2634,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 						uccidi: i18n.AvventuraNelCastelloJS.objects.ogre.onKill,
 						nutri: i18n.AvventuraNelCastelloJS.objects.ogre.onFeed,
 						"parla|saluta": async () => {
-							await this.CRT.println(i18n.AvventuraNelCastelloJS.objects.ogre.onCheer, {reversed:true});
+							await this.CRT.println(i18n.AvventuraNelCastelloJS.objects.ogre.onTalkOrGreet, {reversed:true});
 							await this.s0();
 							return true;
 						}
@@ -2670,7 +2646,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					pattern: i18n.AvventuraNelCastelloJS.objects.dwarf.pattern,
 					description: i18n.AvventuraNelCastelloJS.objects.dwarf.description,
 					posizione: "legnaia",
-					states: i18n.AvventuraNelCastelloJS.objects.dwarf.states,
 					status: 0,
 					visibile: true,
 					peso: -1,
@@ -2742,8 +2717,6 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					pattern: i18n.AvventuraNelCastelloJS.objects.key.pattern,
 					description: i18n.AvventuraNelCastelloJS.objects.key.description,
 					posizione: null,
-					states: i18n.AvventuraNelCastelloJS.objects.key.states,
-					status: 0,
 					visibile: false
 				},
 
@@ -2789,7 +2762,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 					await this.CRT.println("  |   |      #####      |   |",{m: true});
 					await this.CRT.println("  |   |      #####      |   |",{m: true});
 					await this.CRT.println("===============================",{m: true});
-					await this.CRT.println("<span class='reversed'>   AVENTURA NO CASTELO JS   </span>",{m: true});
+					await this.CRT.println("<span class='reversed'>"+i18n.title+"</span>");
 					await this.CRT.println("===============================\n",{m: true});
 					
 					await this.CRT.wait();
@@ -2908,7 +2881,7 @@ class Avventura extends AvventuraNelCastelloJSEngine{
 
 						if(this.inventario.osso.status == 0){
 
-							this.datiAvventura.objects.osso.status = 1;
+							this.inventario.osso.status = 1;
 							this.aggiungiPunti("apertaFessura");
 							let i=0;
 							await this.CRT.printTyping (i18n.AvventuraNelCastelloJS.sequences.castleDungeon.success[i++],{cr: false});

@@ -117,7 +117,7 @@ class IFEngine{
 				},
 
 				// Istruzioni 
-				instrucoes: {
+				istruzioni: {
 					callback: async () => {
 						await this.istruzioni();
 						return true;
@@ -133,7 +133,7 @@ class IFEngine{
 				},
 
 				// Esci
-				parar: {
+				basta: {
 					callback: async () => {
 						let answer = await this.yesNoQuestion(i18n.IFEngine.questions.stopQuestion);
 						if(answer){
@@ -240,7 +240,7 @@ class IFEngine{
 			question = "";
 		let scelta;
 		do {
-			await this.CRT.printTyping(question+"? ",{cr:false});
+			await this.CRT.printTyping(question+i18n.IFEngine.questionMark+" ",{cr:false});
 			scelta = await this.CRT.input(false);
 			
 			if(opzioni[scelta] === undefined){
@@ -582,7 +582,7 @@ class IFEngine{
 	async wtf(APO, wtf){
 		if(wtf.indexOf(" ") >=0)
 			wtf = wtf.substring(0,wtf.indexOf(" "));
-		await this.CRT.printTyping("   "+wtf.toUpperCase()+" ???");
+		await this.CRT.printTyping("   "+wtf.toUpperCase()+" "+i18n.IFEngine.questionMark+i18n.IFEngine.questionMark+i18n.IFEngine.questionMark);
 		return;
 	}
 
@@ -707,7 +707,7 @@ class IFEngine{
 			return this._notSeen(mSubjects[0]);
 		}
 		switch (APO.verb){
-			case i18n.IFEngine.verbs.look:
+			case "guarda":
 
 				let descrizione = mSubjects[0].description ?  
 					(Array.isArray(mSubjects[0].description) ? mSubjects[0].description[mSubjects[0].status] : mSubjects[0].description) :
@@ -715,11 +715,11 @@ class IFEngine{
 				await this.CRT.printTyping(descrizione);
 				return true;	
 			
-			case i18n.IFEngine.verbs.take:
+			case "prendi":
 				let ret = await this._prendi(mSubjects[0]);
 				return ret === undefined ? true : ret;
 			
-			case i18n.IFEngine.verbs.drop:
+			case "lascia":
 	 			if(this.inventario[mSubjects[0].key] !== undefined){
 					this._rimuoviDaInventario(mSubjects[0]);
 					await this.CRT.printTyping(this.Thesaurus.defaultMessages.FATTO);
@@ -832,10 +832,10 @@ class IFEngine{
 		} else {
 			output = "* "+i18n.IFEngine.messages.carriedObjectsLabel+" *"+"\n"
 			for(let i in this.inventario){
-				let label = this.inventario[i].label;
-				if(this.inventario[i].states !== undefined){
-					label += " "+this.inventario[i].states[this.inventario[i].status];
-				}
+				let label = Array.isArray(this.inventario[i].label) ? 
+					this.inventario[i].label[this.inventario[i].status] : 
+					this.inventario[i].label
+				;
 				output += "\n- "+label.trim()+".";
 			}
 		}
