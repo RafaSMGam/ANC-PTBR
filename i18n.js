@@ -1465,7 +1465,7 @@ var i18n = {
 			},
 			trophiesRoom: {
 				description: `Você está em um cômodo pequeno apinhado de troféus de caça e de guerra. Nas paredes vejo animais de toda espécie, armas, escudos, até uma armadura completa que pode ter pertencido a um Rei inimigo morto em batalha pelo Soberano.`,
-				shortDescription: `Você está na sala de troféus.`,
+				shortDescription: `Você está na sala dos troféus.`,
 				interactors: {
 					armor: { 
 						spadeText: `, apoiada na espada`,
