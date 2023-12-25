@@ -1340,7 +1340,7 @@ var i18n = {
 					benches: {
 						label: `os bancos`,
 						pattern: `banc(?:o|os)`,
-						description: `Elas são da mesma madeira da mesa, polidos pelo uso prolongado.`
+						description: `Eles são da mesma madeira da mesa, polidos pelo uso prolongado.`
 					}
 				},
 
@@ -1369,7 +1369,7 @@ var i18n = {
 					pieces: {
 						label: `as peças`,
 						pattern: `(pec(?:a|as)|part(?:e|es))`,
-						description: `Elas teriam que ser juntadas para formar a catapulta, ou pelo menos é o que eu acho.`
+						description: `Elas teriam que ser montadas para formar a catapulta, ou pelo menos é o que eu acho.`
 					},
 				},
 			},
