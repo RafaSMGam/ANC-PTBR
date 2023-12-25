@@ -1540,12 +1540,12 @@ var i18n = {
 
 			},
 			wardrobe: {
-				description: `Você está no guarda-roupa do rei. As traças e os carunchos reduziram os imponentes guarda-roupas e os trajes requintados a algumas pilhas de frangalhos.`,
+				description: `Você está no guarda-roupa do rei. As traças e os carunchos reduziram os imponentes guarda-roupas e os trajes requintados a algumas pilhas de trapos.`,
 				shortDescription: `Você está no guarda-roupa.`,
 				interactors: {
 					shreds: {
-						label: `os frangalhos`,
-						pattern: `frangalh(?:o|os)|pilha(?:s)?`,
+						label: `os trapos`,
+						pattern: `trap(?:o|os)|pilha(?:s)?`,
 						description: `Sic transit gloria mundi.`,
 					}
 				},
