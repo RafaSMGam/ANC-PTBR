@@ -1524,7 +1524,7 @@ var i18n = {
 				},
 			},
 			boardRoom: {
-				description: `Você está na sala do conselho, onde as decisões mais sérias e importantes eram tomadas. Toda a mobília consiste em uma mesa redonda rodeada por oito cadeiras.`,
+				description: `Você está na sala do conselho, onde as mais sérias e importantes decisões eram tomadas. Toda a mobília consiste em uma mesa redonda rodeada por oito cadeiras.`,
 				shortDescription: `Você está na sala do conselho.`,
 				interactors: {
 					table: {
