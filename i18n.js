@@ -1570,7 +1570,7 @@ var i18n = {
 				shortDescription: `Você está no quarto da Princesa.`,
 				interactors: {
 					bed: {
-						description: `É decorada com cores delicadas em tons suaves.`
+						description: `Foi decorada com cores delicadas em tons suaves.`
 					},
 					curtains: {
 						label: `as cortinas`,
@@ -1585,7 +1585,7 @@ var i18n = {
 				shortDescription: `Você está nos aposentos do Rei.`,
 				interactors: {
 					bed: {
-						description: `É pintada em cores fortes e vibrantes.`
+						description: `Foi pintada de cores fortes e vibrantes.`
 					}
 				},
 
