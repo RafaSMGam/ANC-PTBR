@@ -1540,7 +1540,7 @@ var i18n = {
 
 			},
 			wardrobe: {
-				description: `Você está no guarda-roupa do rei. As traças e os carunchos reduziram os imponentes guarda-roupas e os trajes requintados a algumas pilhas de trapos.`,
+				description: `Você está no guarda-roupa do rei. As traças e os carunchos reduziram o imponente guarda-roupa e os trajes requintados a algumas pilhas de trapos.`,
 				shortDescription: `Você está no guarda-roupa.`,
 				interactors: {
 					shreds: {
