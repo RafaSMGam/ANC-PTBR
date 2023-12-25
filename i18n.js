@@ -1332,7 +1332,7 @@ var i18n = {
 			},
 			guardRoom:{
 				description: `O cômodo em que você está deve ter sido a sala dos guardas que vigiavam a entrada do castelo. Fora uma mesa rústica e bancos pesados, a sala está completamente vazia.`,
-				shortDescription: `Você está na sala da guarda.`,
+				shortDescription: `Você está na sala dos guardos.`,
 				interactors: {
 					table: { 
 						description: `É uma mesa de madeira, certamente não é elegante, mas é muito resistente.`
