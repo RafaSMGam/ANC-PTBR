@@ -1732,19 +1732,19 @@ var i18n = {
 				spell: {
 					dontKnow: `Você não conhece nenhum feitiço.`, 
 					dontRemember: `Não me lembro, era muito complicado.`,
-					question: `Preciso dizê-lo em voz alta `,
+					question: `Devo dizê-lo em voz alta`,
 					fail: [
 						`Sua garganta fica seca de medo...`,
 						`Você não consegue falar...`,
 						`O fantasma aproveita para atacá-lo.`
 					],
-					success: `Com um gemido longo e desesperado, o fantasma retorna ao Nada de onde veio.`
+					success: `Com um longo gemido desesperado, o fantasma retorna ao Nada de onde veio.`
 				}
 			},
 			spell: {
 				label: `o feitiço`,
 				pattern: `feitico|encantamento`,
-				onLook: `Acho que a leitura dos símbolos e fórmulas estranhos pode evocar forças há muito tempo adormecidas .`
+				onLook: `Acredito que a leitura dos estranhos símbolos e fórmulas possa evocar forças há muito tempo adormecidas.`
 			},
 			milkAndHoneyCup: {
 				label: [
