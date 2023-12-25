@@ -1479,7 +1479,7 @@ var i18n = {
 
 			},
 			kitchen: {
-				description: `O cômodo no qual se encontra deve ter sido a cozinha do castelo. Eu vejo uma grande lareira, restos de cerâmica, tachos e panelas e banheiras grandes.`,
+				description: `O cômodo no qual se encontra deve ter sido a cozinha do castelo. Eu vejo um grande braseiro, restos de cerâmica, tachos e panelas e grandes pias.`,
 				shortDescription: `Você está na cozinha.`,
 				interactors: {
 					kitchenStuff: {
