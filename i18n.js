@@ -1412,7 +1412,7 @@ var i18n = {
 				shortDescription: `Você está no salão dos servos.`
 			},
 			columnsHall: {
-				description:  `Você está em um longo salão, em ambos os lados do qual se erguem duas fileiras de colunas altas, sustentando o teto em arco. As colunas, embora corroídas pelo tempo, ainda exibem os sinais de um trabalho esmerado feito por artesãos habilidosos. No centro da sala, uma pequena coluna de pedra repousa em um pedestal baixo.`,
+				description:  `Você está em um longo salão, em ambos os lados do qual se erguem duas fileiras de colunas altas, sustentando o teto em arco. As colunas, embora corroídas pelo tempo, ainda exibem os sinais de um trabalho esmerado feito por habilidosos artesãos. No centro da sala, uma pequena coluna de pedra repousa sobre um pedestal baixo.`,
 				shortDescription: `Você está no salão das colunas.`,
 				interactors: {
 					column: {
