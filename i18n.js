@@ -253,7 +253,7 @@ var i18n = {
 				defaultMessage: `Eu já faço ginástica todas as manhãs.`
 			},
 			sitDown: {
-				pattern: `(sentar(?:-se)?|deitar(?:-se)?)(?: no )?(.+)?`,
+				pattern: `(sentar(?:-se)?|deitar(?:-se)?)(?: em )?(.+)?`,
 				defaultMessage: `Um pouco de repouso sempre faz bem.`
 			},
 			greet: {
@@ -545,7 +545,7 @@ var i18n = {
 				replaceWith: ` da `
 			},
 			{
-				pattern: ` (no|nos|dentro) `,
+				pattern: ` (no|nos|na|nas|dentro) `,
 				replaceWith: ` em `
 			},
 			{
@@ -553,8 +553,8 @@ var i18n = {
 				replaceWith: ` com `
 			},
 			{
-				pattern: ` (sobre|em|na) `,
-				replaceWith: ` no `
+				pattern: ` (sobre) `,
+				replaceWith: ` em `
 			},
 			{
 				pattern: ` (tra|fra) `,
