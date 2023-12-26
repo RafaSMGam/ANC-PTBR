@@ -253,7 +253,7 @@ var i18n = {
 				defaultMessage: `Eu já faço ginástica todas as manhãs.`
 			},
 			sitDown: {
-				pattern: `(sentar(?:-se)?|deitar(?:-se)?)(?: em )?(.+)?`,
+				pattern: `(sentar(?:-se)?|deitar(?:-se)?)(?: no )?(.+)?`,
 				defaultMessage: `Um pouco de repouso sempre faz bem.`
 			},
 			greet: {
