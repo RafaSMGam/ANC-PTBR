@@ -1855,7 +1855,7 @@ var i18n = {
 				description: `Ele é bem pequenininho.`,
 				onGreet: {
 					withoutDiamond: `- Boa noite a Vós! - responde o anão.`,
-					withDiamond: `O anão está tão feliz por finalmente conhecer uma pessoa cordial que lhe dá o diamante.`
+					withDiamond: `O anão fica tão feliz por finalmente conhecer uma pessoa cordial que lhe dá o diamante.`
 				},
 				onFeed: `Ele acabou de jantar.`,
 				onKill: [
