@@ -299,7 +299,7 @@ var i18n = {
 				pattern: `beber`
 			},
 			wind: {
-				pattern: `(carregar|ativar)`
+				pattern: `(ligar|ativar)`
 			},
 			kill: {
 				pattern: `(matar|atacar|golpear|ferir|eliminar|abater)`,
@@ -560,6 +560,7 @@ var i18n = {
 				pattern: ` (tra|fra) `,
 				replaceWith: ` entre `
 			},
+
 
 		]
 	},
