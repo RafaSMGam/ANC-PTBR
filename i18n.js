@@ -1037,7 +1037,7 @@ var i18n = {
 						],
 						pattern: `(?:pesado )?bau`,
 						onLook: [
-							`Tudo o que resta do fabuloso tesouro de Malcolm IV é um velho chifre.`,
+							`Tudo o que resta do fabuloso tesouro de Malcolm IV é um velho olifante.`,
 							`Ele está vazio.`
 						],
 						onOpen:[
@@ -1880,8 +1880,8 @@ var i18n = {
 				description: `É muito estranha, pequena demais para ser a chave de uma porta ou portão. Além disso, parece frágil. Para que será que ela serve?`,
 			},
 			horn: {
-				label: `um chifre`,
-				pattern: `chifre`,
+				label: `um olifante`,
+				pattern: `olifante`,
 				description: `É decorado com cenas de caça em uma espiral a partir da boca. Cavaleiros a galope perseguem suas presas, enquanto grandes pássaros pairam sobre suas cabeças.`,
 				onPlay: `O som cavernoso ecoa entre as paredes do castelo.`
 			}
@@ -1973,7 +1973,7 @@ var i18n = {
 				`mas no fim, tudo o que lhe resta é uma forte enxaqueca.`
 			],
 			eagle: [
-				`O som do antigo chifre cruza a charneca, ecoando até as montanhas distantes.`,
+				`O som do antigo olifante cruza a charneca, ecoando até as montanhas distantes.`,
 				`Um ponto negro se destaca das montanhas e fica maior à medida que se aproxima.`,
 				`Velozmente, ele chega à torre: é uma grande águia dourada voando em sua direção com as garras estendidas.`,
 				`Você não tem a menor chance:`,
@@ -2006,11 +2006,11 @@ var i18n = {
 				reversed: ` SPLAT!`
 			},
 			final: [
-				`O som do antigo chifre cruza a charneca, ecoando até as montanhas distantes.`,
+				`O som do antigo olifante cruza a charneca, ecoando até as montanhas distantes.`,
 				`Um ponto negro se destaca das montanhas e fica maior à medida que se aproxima.`,
 				`Velozmente, ele chega à torre: é um helicóptero do Serviço Arqueológico Real que lhe lança uma escada de resgate. Você sobe a escada enquanto as mandíbulas do monstro se fecham alguns centímetros sob si.`,
-				`Enquanto o helicóptero segue para Edimburgo, você conta sua aventura, mostrando o chifre, o único item que conseguiu guardar. Ao vê-lo, o prof. Mac Anthrop (diretor do Museu de Edimburgo) exclama:`,
-				`- Este é o chifre de Malcolm IV, que se pensava estar perdido para sempre!`,
+				`Enquanto o helicóptero segue para Edimburgo, você conta sua aventura, mostrando o olifante, o único item que conseguiu guardar. Ao vê-lo, o prof. Mac Anthrop (diretor do Museu de Edimburgo) exclama:`,
+				`- Este é o olifante de Malcolm IV, que se pensava estar perdido para sempre!`,
 				`- Ele deve valer pelo menos um milhão de libras! - afirma seu assistente.`,
 				`O helicóptero pousa em Edimburgo.`,
 				`Você é imediatamente preso por:`,
@@ -2024,7 +2024,7 @@ var i18n = {
 				`- Embriaguez.`,
 				`- Prática de feitiçaria sem licença.`,
 				`- Perturbação de um monstro de espécie protegida.`,
-				`Naturalmente, o chifre é confiscado para o museu.`,
+				`Naturalmente, o olifante é confiscado para o museu.`,
 				`O diretor, ainda comovido com a importante descoberta, intervém em seu favor. Você é libertado e até recebe um prêmio dos escoceses agradecidos (o que é bastante incomum):`, 
 				`Um bilhete `,
 				`GRATUITO`,
