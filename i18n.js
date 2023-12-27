@@ -299,7 +299,7 @@ var i18n = {
 				pattern: `beber`
 			},
 			wind: {
-				pattern: `(dar corda  (?:em)`
+				pattern: `(dar( corda)? (?:em)`
 			},
 			kill: {
 				pattern: `(matar|atacar|golpear|ferir|eliminar|abater)`,
