@@ -218,7 +218,7 @@ var i18n = {
 				defaultMessage: `Para que lado? (N/S/L/O/C/B)`					
 			},
 			wear: {
-				pattern: `(colocar|por|vestir|trajar)`,
+				pattern: `(por|vestir|trajar)`,
 			},
 			liftUp: {
 				pattern: `(levantar|erguer)`,
@@ -235,7 +235,7 @@ var i18n = {
 				pattern: `ler`
 			},
 			insert: {
-				pattern: `(enfiar|inserir|botar|meter|colocar)`
+				pattern: `(enfiar|inserir|botar|meter|colocar|por)`
 			},
 			insertInto: {
 				pattern: `(enfiar|inserir|botar|meter|colocar|por) (.+) (?:em) (.+)`
