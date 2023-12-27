@@ -202,7 +202,7 @@ var i18n = {
 				pattern: `(empurrar|forcar|mover)`
 			},
 			offer: {
-				pattern: `(oferecer|ofertar)`
+				pattern: `(oferecer|dar)`
 			},
 			repair: {
 				pattern: `(consertar|reparar)`					
