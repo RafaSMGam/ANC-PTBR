@@ -305,7 +305,7 @@ var i18n = {
 				pattern: `(matar|atacar|golpear|ferir|eliminar|abater)`,
 			},
 			feed: {
-				pattern: `(nutrir|alimentar)`
+				pattern: `(nutrir|alimentar|dar de comer)`
 			},
 			pet: {
 				pattern: `(afagar|acariciar|fazer carinho(?: em)?)`
