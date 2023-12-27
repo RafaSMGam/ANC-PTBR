@@ -115,7 +115,7 @@ var i18n = {
 				pattern: `soltar`
 			},
 			give: {
-				pattern: `(dar) (.+) (?:a) (.+)`,
+				pattern: `(oferecer) (.+) (?:a) (.+)`,
 			},
 			look: {
 				pattern: `(olhar|examinar)`
