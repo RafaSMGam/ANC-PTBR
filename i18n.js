@@ -1760,7 +1760,7 @@ var i18n = {
 			},
 			milkAndHoney: {
 				label: `o leite com mel`,
-				pattern: `leite com mel`,
+				pattern: `leite( com mel)?`,
 				description: `Pela aparência e pelo cheiro, parece bom.`,
 				onDrink: {
 					success: `Muito bom, muito bom mesmo!`,
