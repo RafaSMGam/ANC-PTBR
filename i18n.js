@@ -299,13 +299,13 @@ var i18n = {
 				pattern: `beber`
 			},
 			wind: {
-				pattern: `(carregar|(dar corda(?: em)?)`
+				pattern: `(carregar|(dar corda)`
 			},
 			kill: {
 				pattern: `(matar|atacar|golpear|ferir|eliminar|abater)`,
 			},
 			feed: {
-				pattern: `(nutrir|alimentar|dar de comer)`
+				pattern: `(nutrir|alimentar)`
 			},
 			pet: {
 				pattern: `(afagar|acariciar|fazer carinho(?: em)?)`
