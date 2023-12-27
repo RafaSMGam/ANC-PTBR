@@ -1621,7 +1621,7 @@ var i18n = {
 			rock: {
 				description: [
 					`Você está sozinho e abandonado em uma rocha negra que emerge das águas geladas...`,
-					` Correção, você não está sozinho: você tem a companhia do monstro do Lago Ness (Nessie, para os íntimos).`
+					` correção, você não está sozinho: você tem a companhia do monstro do Lago Ness (Nessie, para os íntimos).`
 				],
 				shortDescription: `Você está na rocha.`,
 				interactors: {
