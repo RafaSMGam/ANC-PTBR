@@ -463,8 +463,8 @@ var i18n = {
 						`ele te observa com atenção............`
 					],
 					success: [
-						`O gato cresce até ficar enorme............`,
-						`ele te observa com atenção............`
+						`ele observa o ogro com atenção............`,
+						`O gato devora o ogro e morre de indigestão.`
 					],
 					fail: `e te devora.`
 				}
