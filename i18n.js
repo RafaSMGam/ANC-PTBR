@@ -995,7 +995,7 @@ var i18n = {
 				}
 			},
 			narrowTunnel: {
-				description: `Você está em um túnel estreito, cujas paredes estão cobertas de mofo esverdeado e fungos putrescentes.`,
+				description: `Você está em um túnel estreito, cujas paredes estão cobertas de musgos esverdeados e fungos putrescentes.`,
 				shortDescription: `Você está em um túnel estreito.`,
 				interactors: {
 					moulds: {
