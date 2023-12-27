@@ -1978,7 +1978,7 @@ var i18n = {
 				`Velozmente, ele chega à torre: é uma grande águia dourada voando em sua direção com as garras estendidas.`,
 				`Você não tem a menor chance:`,
 				`a águia o agarra, levantando-o rapidamente a uma grande altura.`,
-				`A águia voa por muito tempo enquanto a paisagem flui sob si... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...o Lago Ness parece distante... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...`,
+				`A águia voa por muito tempo enquanto a paisagem flui sob si... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...o Lago Ness parece distante... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...`,
 				`De repente, a Águia o solta.`
 			],
 			rock:  [
