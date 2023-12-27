@@ -115,7 +115,7 @@ var i18n = {
 				pattern: `soltar`
 			},
 			give: {
-				pattern: `(dar) (.+) (?:a) (.+)`,
+				pattern: `(oferecer) (.+) (?:a) (.+)`,
 			},
 			look: {
 				pattern: `(olhar|examinar)`
@@ -202,7 +202,7 @@ var i18n = {
 				pattern: `(empurrar|forcar|mover)`
 			},
 			offer: {
-				pattern: `(oferecer|dar)`
+				pattern: `(oferecer|ofertar)`
 			},
 			repair: {
 				pattern: `(consertar|reparar)`					
@@ -299,7 +299,7 @@ var i18n = {
 				pattern: `beber`
 			},
 			wind: {
-				pattern: `(dar )?corda  (?:em)`
+				pattern: `(dar corda  (?:em)`
 			},
 			kill: {
 				pattern: `(matar|atacar|golpear|ferir|eliminar|abater)`,
