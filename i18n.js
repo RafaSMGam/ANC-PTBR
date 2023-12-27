@@ -1041,7 +1041,7 @@ var i18n = {
 							`Ele está vazio.`
 						],
 						onOpen:[
-							`O fantasma de Edgar mac Douglas, fiel escudeiro de Sire Malcolm, surge para defender o tesouro de seu antigo rei contra o profanador estrangeiro.`,
+							`O fantasma de Edgar mac Douglas, fiel escudeiro de Sire Malcolm, surge para defender o tesouro de seu antigo Rei contra o profanador estrangeiro.`,
 							`O fantasma o envolve, sufocando-o em seu abraço mortal.`
 						],
 						onClose: `As dobradiças se romperam.`
