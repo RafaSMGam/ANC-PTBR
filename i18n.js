@@ -582,7 +582,7 @@ var i18n = {
 				label: `a armadura`,
 				pattern: `armadur(?:a|as)`,
 				description: `As armaduras parecem olhar para você com um ar arrogante.`,
-				onTakeOrWear: `Está brincando? Ela pesa o dobro de você. Naqueles tempos eles certamente não eram covardes, como hoje.`
+				onTakeOrWear: `Está brincando? Ela pesa o dobro de você. Naqueles tempos eles certamente não eram frouxos, como hoje.`
 			},
 			hallway: {
 				label: `o corredor`,
