@@ -459,8 +459,8 @@ var i18n = {
 				pattern: (sayPattern) => `(${sayPattern} )?bigmeow`,
 				defaultMessage: {
 					prelude: [
-						`Il gatto cresce fino a diventare enorme............`,
-						`ti osserva con attenzione............`
+						`O gato cresce até ficar enorme............`,
+						`ele te observa com atenção............`
 					],
 					success: [
 						`O gato cresce até ficar enorme............`,
