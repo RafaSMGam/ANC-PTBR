@@ -1091,7 +1091,7 @@ var i18n = {
 				shortDescription: `Você está no topo das escadas.`,
 				interactors: {
 					walls: {
-						description: `Não vejo nenhuma alça ou abertura.`,
+						description: `Não vejo nenhum ponto de apoio ou fissura.`,
 						onPush: [
 							`A parede gira sobre si mesma...`,
 							` e se fecha bem atrás de você.`
