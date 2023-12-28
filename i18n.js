@@ -1501,7 +1501,7 @@ var i18n = {
 					infolio: {
 						label: `documentos`,
 						pattern : `pil(?:ao|oes)|recipient(?:e|es)|cadinh(?:o|os)|documentos|alambiqu(?:e|es)`,
-						description: `É a parafernália típica de um alquimista da época, um mago, estudioso e curandeiro ao mesmo tempo. Os alquimistas eram tidos em alta estima e muito temidos e respeitados, a menos que caíssem em desgraça por causa de algum erro fatal cometido contra o rei.`,
+						description: `É a parafernália típica de um alquimista da época, um mago, estudioso e curandeiro ao mesmo tempo. Os alquimistas eram tidos em alta estima e eram muito temidos e respeitados, a menos que caíssem em desgraça por causa de algum erro fatal cometido contra o Rei.`,
 						onTakeOrRead: `Uma força oculta parece estar lhe advertindo: vasculhar os bens pessoais de um alquimista pode ser muito perigoso.`
 					},
 					bookmark: {
