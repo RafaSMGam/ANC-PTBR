@@ -1592,7 +1592,7 @@ var i18n = {
 
 			},
 			mirrorsHall: {
-				description: `Você está em um salão com paredes cobertas de espelhos de todas as formas e tamanhos. Espelhos curvos, espelhos gigantes, espelhos côncavos refletem sua imagem infinitas vezes, dando a impressão de que rostos malignos estão olhando para você de todos os ângulos da sala. Era o cômodo favorito da vaidosa Rainha.`,
+				description: `Você está em um salão com paredes cobertas de espelhos de todas as formas e tamanhos. Espelhos curvos, espelhos gigantes e espelhos côncavos refletem sua imagem infinitas vezes, dando a impressão de que rostos malignos estão olhando para você de todos os ângulos da sala. Era o cômodo favorito da vaidosa Rainha.`,
 				shortDescription: `Você está na sala dos espelhos.`,
 				bonk: `BONK!`,
 				notADoor: `Essa não é a porta, é um espelho!`,
