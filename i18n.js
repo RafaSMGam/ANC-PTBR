@@ -1094,7 +1094,7 @@ var i18n = {
 						description: `Não vejo nenhum ponto de apoio ou fissura.`,
 						onPush: [
 							`A parede gira sobre si mesma...`,
-							` e se fecha bem atrás de você.`
+							` e se fecha logo atrás de você.`
 						]
 					}
 				},
