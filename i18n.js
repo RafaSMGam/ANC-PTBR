@@ -1188,7 +1188,7 @@ var i18n = {
 				}
 			},
 			topOfTower: {
-				description: `Você está no topo da torre, de onde seu olhar pode varrer a névoa que cobre os pântanos até as montanhas distantes.`,
+				description: `Você está no topo da torre, de onde seu olhar pode varrer a névoa que cobre a charneca até as montanhas distantes.`,
 				shortDescription: `Você está no topo da torre.`,
 				interactors: {
 					fog:{
