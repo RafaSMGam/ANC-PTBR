@@ -242,7 +242,7 @@ var i18n = {
 			},
 			pray: {
 				pattern: `(rezar|orar)`,
-				defaultMessage: `  Deus ajuda a quem se ajuda.`
+				defaultMessage: `  Deus ajuda quem se ajuda.`
 			},
 			land: {
 				pattern: `(aterrissar|cair|planar|pousar|virar|manobrar)`,
