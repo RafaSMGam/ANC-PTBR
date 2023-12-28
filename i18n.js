@@ -1081,7 +1081,7 @@ var i18n = {
 					verbs: {
 						askForDiamond: [
 							`Ele já o deu a você, não se lembra?`,
-							`Duvido que ele esteja disposto a dà-lo a você.`
+							`Duvido que ele esteja disposto a dá-lo a você.`
 						],
 					}
 				},
