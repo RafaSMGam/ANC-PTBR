@@ -1042,7 +1042,7 @@ var i18n = {
 							`Ele está vazio.`
 						],
 						onOpen:[
-							`O fantasma de Edgar mac Douglas, fiel escudeiro de Sire Malcolm, surge para defender o tesouro de seu antigo Rei contra o profanador estrangeiro.`,
+							`O fantasma de Edgar mac Douglas, fiel escudeiro de Sir Malcolm, surge para defender o tesouro de seu antigo Rei contra o profanador estrangeiro.`,
 							`O fantasma o envolve, sufocando-o em seu abraço mortal.`
 						],
 						onClose: `As dobradiças se romperam.`
@@ -1470,7 +1470,7 @@ var i18n = {
 				interactors: {
 					armor: { 
 						spadeText: `, apoiada na espada`,
-						onLook: (spadeText) => `É a armadura de sir Crawdolf, o talentoso mago de combate que por muitos anos manteve o Rei Malcolm como refém com suas terríveis habilidades e proezas. A armadura ainda mantém uma postura arrogante e parece te encarar${spadeText}.`
+						onLook: (spadeText) => `É a armadura de Sir Crawdolf, o talentoso mago de combate que por muitos anos manteve o Rei Malcolm como refém com suas terríveis habilidades e proezas. A armadura ainda mantém uma postura arrogante e parece te encarar${spadeText}.`
 					},
 					trophies: {
 						label: `troféus`,
